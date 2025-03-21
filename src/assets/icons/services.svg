@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<g id="Layer_1">
+	<path d="M8,15c3.86,0,7-3.14,7-7s-3.14-7-7-7S1,4.14,1,8S4.14,15,8,15z M8,3c2.757,0,5,2.243,5,5s-2.243,5-5,5s-5-2.243-5-5
+		S5.243,3,8,3z"></path>
+	<rect x="18" y="7" width="31" height="2"></rect>
+	<path d="M8,32c3.86,0,7-3.14,7-7s-3.14-7-7-7s-7,3.14-7,7S4.14,32,8,32z M8,20c2.757,0,5,2.243,5,5s-2.243,5-5,5s-5-2.243-5-5
+		S5.243,20,8,20z"></path>
+	<rect x="18" y="24" width="31" height="2"></rect>
+	<path d="M8,49c3.86,0,7-3.14,7-7s-3.14-7-7-7s-7,3.14-7,7S4.14,49,8,49z M8,37c2.757,0,5,2.243,5,5s-2.243,5-5,5s-5-2.243-5-5
+		S5.243,37,8,37z"></path>
+	<rect x="18" y="41" width="31" height="2"></rect>
+</g>
+<g>
+</g>
+</svg>
