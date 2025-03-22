@@ -10,7 +10,10 @@ export function MainPage() {
             </span>
           </h1>
           <h2 className="text-lg font-bold mb-5">
-            I`m a <span className="text-red-700">Frontend Developer</span>
+            I`m a{" "}
+            <span className="text-red-700 pl-1 relative before:absolute before:left-[-1%] before:border-red-700 before:border-l-4 before:bg-dark_prime before:h-full before:w-full before:animate-runline">
+              Frontend Developer
+            </span>
           </h2>
           <p className="text-slate-300 mb-14">
             I`m a Frontend Developer extensive experience for over 10 years. My
