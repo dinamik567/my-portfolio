@@ -1,11 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import { MainPage } from "../pages/MainPage";
 import { Dashboard } from "../components/Dashboard";
+import { rootStore } from "../store/global.store";
+import { observer } from "mobx-react";
 
-export function Router() {
+export const Router = observer(() => {
+  const { darkMode } = rootStore.themeColors;
+
   return (
     <BrowserRouter>
-      <div className="w-full flex">
+      <div className={`${darkMode && "dark"} w-full flex`}>
         <Dashboard />
         <Routes>
           <Route path="/" index element={<MainPage />} />
@@ -17,4 +21,4 @@ export function Router() {
       </div>
     </BrowserRouter>
   );
-}
+});

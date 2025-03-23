@@ -5,7 +5,7 @@ import { rootStore } from "../store/global.store";
 export const MainPage = observer(() => {
   const { activeColor } = rootStore.themeColors;
   return (
-    <div className="w-[87%] h-screen relative bg-dark_prime text-white overflow-hidden">
+    <div className="w-[87%] h-screen relative dark:bg-dark_prime dark:text-white bg-light_prime text-light_text overflow-hidden">
       <div className="flex justify-between items-start gap-20 w-10/12 mx-auto mt-44">
         <div className="pt-4 px-4">
           <h1 className="text-xl font-bold mb-6">
@@ -20,18 +20,18 @@ export const MainPage = observer(() => {
           <h2 className="text-lg font-bold mb-5">
             I`m a{" "}
             <span
-              className="text-[var(--my-color)] pl-1 relative px-1 before:absolute before:left-[-1%] before:border-[var(--my-color)] before:border-l-4 before:bg-dark_prime before:h-full before:w-full before:animate-runline"
+              className="text-[var(--my-color)] pl-1 relative px-1 before:absolute before:left-[-1%] before:border-[var(--my-color)] before:border-l-4 before:bg-inherit before:h-full before:w-full before:animate-runline"
               style={{ "--my-color": activeColor } as React.CSSProperties}
             >
               Frontend Developer
             </span>
           </h2>
-          <p className="text-slate-300 mb-14">
+          <p className="dark:text-slate-300 text-light_text  mb-14">
             I`m a Frontend Developer extensive experience for over 10 years. My
             experience is to create and website design, graphic design, and more
           </p>
           <button
-            className="bg-[var(--my-color)] py-2 px-8 rounded-xl"
+            className="bg-[var(--my-color)] py-2 px-8 rounded-xl text-white"
             style={{ "--my-color": activeColor } as React.CSSProperties}
           >
             More About me
