@@ -16,6 +16,7 @@ export default {
       },
       colors: {
         dark_prime: "#151515",
+        dark_text: "white",
         light_prime: "#e6e8ec",
         light_text: "#3c3341",
       },

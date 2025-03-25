@@ -31,11 +31,11 @@ export const ControlPanel = observer(() => {
     rootStore.themeColors.setBlueColor(COLORS["PINK"]);
 
   return (
-    <div className="dark absolute top-4 right-3 flex justify-between gap-4 dark:text-slate-200">
+    <div className="absolute top-4 right-3 flex justify-between gap-4 dark:text-slate-200">
       <div
         className={`${
           isOpenPanel ? "translate-x-0" : "translate-x-[500%]"
-        } flex flex-col gap-2 h-28 bg-[#222222] pt-2 px-4 rounded transition-transform duration-500 ease-in-out`}
+        } flex flex-col gap-2 h-28 dark:bg-[#222222] bg-white pt-2 px-4 rounded transition-transform duration-500 ease-in-out`}
       >
         <h3 className="text-left text-lg">Theme Colors</h3>
         <div className="flex justify-between gap-2 py-2">

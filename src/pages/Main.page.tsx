@@ -1,4 +1,4 @@
-import { ControlPanel } from "../components/ui/ControlPanel";
+import { ControlPanel } from "../components/ui/Control.panel";
 import { observer } from "mobx-react";
 import { rootStore } from "../store/global.store";
 

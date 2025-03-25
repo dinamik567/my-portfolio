@@ -13,9 +13,9 @@ export const Dashboard = observer(() => {
   const { activeColor } = rootStore.themeColors;
 
   return (
-    <aside className=" w-[13%] h-screen dark:bg-[#222222] bg-[#fdfbff] text-light_text dark:text-white flex flex-col justify-start items-center pt-12">
+    <aside className="w-[13%] min-h-screen dark:bg-[#222222] bg-[#fdfbff] text-light_text dark:text-white flex flex-col justify-start items-center">
       <div
-        className="w-28 h-16 relative mb-[75%] after:absolute after:top-0 after:left-3 after:w-8 after:h-8 after:border-t-4 after:border-l-4 after:border-[var(--my-color)] before:absolute before:w-8 before:h-8 before:border-b-4 before:border-r-4 before:right-3 before:bottom-0 before:border-[var(--my-color)]"
+        className="w-28 h-16 relative mb-[75%] mt-12 after:absolute after:top-0 after:left-3 after:w-8 after:h-8 after:border-t-4 after:border-l-4 after:border-[var(--my-color)] before:absolute before:w-8 before:h-8 before:border-b-4 before:border-r-4 before:right-3 before:bottom-0 before:border-[var(--my-color)]"
         style={{ "--my-color": activeColor } as React.CSSProperties}
       >
         <div className="h-full flex justify-center items-center ">

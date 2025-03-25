@@ -1,5 +1,5 @@
 import { makeAutoObservable, observable } from "mobx";
-import { ThemeColors, ThemeColorsI } from "./themeColors";
+import { ThemeColors, ThemeColorsI } from "./theme.colors";
 
 class RootStore {
   themeColors: ThemeColorsI;
