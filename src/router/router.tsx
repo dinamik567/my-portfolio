@@ -17,7 +17,7 @@ export const Router = observer(() => {
         <Routes>
           <Route path="/" index element={<MainPage />} />
           <Route path="/about" element={<AboutMePage />} />
-          <Route path="/service" element={<div>Service</div>} />
+          {/* <Route path="/blog" element={<div>Blog</div>} /> */}
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>

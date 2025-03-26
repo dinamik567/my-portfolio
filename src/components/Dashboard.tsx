@@ -1,6 +1,5 @@
 import HomeIcon from "../assets/icons/home.svg?react";
 import UserIcon from "../assets/icons/user.svg?react";
-import ServicesIcon from "../assets/icons/services.svg?react";
 import PortfolioIcon from "../assets/icons/portfolio.svg?react";
 import ContactIcon from "../assets/icons/contact.svg?react";
 import LogoIcon from "../assets/icons/logo.svg?react";
@@ -45,18 +44,6 @@ export const Dashboard = observer(() => {
           <div className="flex justify-around items-center gap-4 px-3 py-1 border-b-[1px] border-slate-600 mb-3">
             <UserIcon width={12} height={12} />
             <span>About</span>
-          </div>
-        </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "text-[var(--my-color)]" : ""
-          }
-          style={{ "--my-color": activeColor } as React.CSSProperties}
-          to="service"
-        >
-          <div className="flex justify-around items-center gap-4 px-3 py-1 border-b-[1px] border-slate-600 mb-3">
-            <ServicesIcon fill="currentColor" width={16} height={16} />
-            <span>Service</span>
           </div>
         </NavLink>
         <NavLink

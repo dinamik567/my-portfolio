@@ -1,7 +1,7 @@
 import SettingsIcon from "../../assets/icons/settings.svg?react";
 import SunIcon from "../../assets/icons/light-mode.svg?react";
 import MoonIcon from "../../assets/icons/night-mode.svg?react";
-import LanguageIcon from "../../assets/icons/language.svg?react";
+// import LanguageIcon from "../../assets/icons/language.svg?react";
 import { useState } from "react";
 import { COLORS } from "../../default.settings";
 import { rootStore } from "../../store/global.store";
@@ -15,20 +15,17 @@ export const ControlPanel = observer(() => {
 
   const handleToggleDarkMode = () => rootStore.themeColors.toggleDarkMode();
 
-  const handleClickRed = () =>
-    rootStore.themeColors.setBlueColor(COLORS["RED"]);
+  const handleClickRed = () => rootStore.themeColors.setColor(COLORS["RED"]);
 
   const handleClickOrange = () =>
-    rootStore.themeColors.setBlueColor(COLORS["ORANGE"]);
+    rootStore.themeColors.setColor(COLORS["ORANGE"]);
 
   const handleClickGreen = () =>
-    rootStore.themeColors.setBlueColor(COLORS["GREEN"]);
+    rootStore.themeColors.setColor(COLORS["GREEN"]);
 
-  const handleClickBlue = () =>
-    rootStore.themeColors.setBlueColor(COLORS["BLUE"]);
+  const handleClickBlue = () => rootStore.themeColors.setColor(COLORS["BLUE"]);
 
-  const handleClickPink = () =>
-    rootStore.themeColors.setBlueColor(COLORS["PINK"]);
+  const handleClickPink = () => rootStore.themeColors.setColor(COLORS["PINK"]);
 
   return (
     <div className="absolute top-4 right-3 flex justify-between gap-4 dark:text-slate-200">
@@ -80,9 +77,9 @@ export const ControlPanel = observer(() => {
           {!darkMode && <MoonIcon fill="currentColor" width={24} height={24} />}
           {darkMode && <SunIcon fill="currentColor" width={24} height={24} />}
         </button>
-        <button className="w-10 h-10 rounded-full dark:bg-[#222222] bg-gray-300 dark:text-slate-200 text-light_text flex justify-center items-center">
+        {/* <button className="w-10 h-10 rounded-full dark:bg-[#222222] bg-gray-300 dark:text-slate-200 text-light_text flex justify-center items-center">
           <LanguageIcon fill="currentColor" width={24} height={24} />
-        </button>
+        </button> */}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ export interface ThemeColorsI {
   darkMode: boolean;
   activeColor: string;
 
-  setBlueColor: (value: string) => void;
+  setColor: (value: string) => void;
   toggleDarkMode: () => void;
 }
 
@@ -16,7 +16,7 @@ export class ThemeColors {
     makeAutoObservable(this);
   }
 
-  setBlueColor = (value: string) => {
+  setColor = (value: string) => {
     this.activeColor = value;
   };
 
