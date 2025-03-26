@@ -5,6 +5,7 @@ import { rootStore } from "../store/global.store";
 import { observer } from "mobx-react";
 import { AboutMePage } from "../pages/About.me.page";
 import { ContactPage } from "../pages/Contact.page";
+import { PortfolioPage } from "../pages/Portfolio.page";
 
 export const Router = observer(() => {
   const { darkMode } = rootStore.themeColors;
@@ -15,10 +16,10 @@ export const Router = observer(() => {
         <Dashboard />
         <Routes>
           <Route path="/" index element={<MainPage />} />
-          <Route path="/about" index element={<AboutMePage />} />
-          <Route path="/service" index element={<div>Service</div>} />
-          <Route path="/portfolio" index element={<div>Portfolio</div>} />
-          <Route path="/contact" index element={<ContactPage />} />
+          <Route path="/about" element={<AboutMePage />} />
+          <Route path="/service" element={<div>Service</div>} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
     </BrowserRouter>
