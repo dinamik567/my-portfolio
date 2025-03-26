@@ -1,6 +1,7 @@
 import { ControlPanel } from "../components/ui/Control.panel";
 import { observer } from "mobx-react";
 import { rootStore } from "../store/global.store";
+import { NavLink } from "react-router";
 
 export const MainPage = observer(() => {
   const { activeColor } = rootStore.themeColors;
@@ -14,7 +15,7 @@ export const MainPage = observer(() => {
               className="font-normal text-[var(--my-color)] italic"
               style={{ "--my-color": activeColor } as React.CSSProperties}
             >
-              Vladislav Irhin
+              Владислав Ирхин
             </span>
           </h1>
           <h2 className="text-lg font-bold mb-5">
@@ -30,12 +31,13 @@ export const MainPage = observer(() => {
             I`m a Frontend Developer extensive experience for over 10 years. My
             experience is to create and website design, graphic design, and more
           </p>
-          <button
+          <NavLink
+            to="/about"
             className="bg-[var(--my-color)] py-2 px-8 rounded-xl text-white"
             style={{ "--my-color": activeColor } as React.CSSProperties}
           >
             More About me
-          </button>
+          </NavLink>
           <p className="mt-28 font-bold text-3xl leading-10">
             <span className="block mb-2">Light & Dark Mode</span>
             <span className="block">Theme Colors</span>
