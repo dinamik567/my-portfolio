@@ -3,7 +3,8 @@ import { MainPage } from "../pages/Main.page";
 import { Dashboard } from "../components/Dashboard";
 import { rootStore } from "../store/global.store";
 import { observer } from "mobx-react";
-import { AboutMe } from "../pages/About.me";
+import { AboutMePage } from "../pages/About.me.page";
+import { ContactPage } from "../pages/Contact.page";
 
 export const Router = observer(() => {
   const { darkMode } = rootStore.themeColors;
@@ -14,10 +15,10 @@ export const Router = observer(() => {
         <Dashboard />
         <Routes>
           <Route path="/" index element={<MainPage />} />
-          <Route path="/about" index element={<AboutMe />} />
+          <Route path="/about" index element={<AboutMePage />} />
           <Route path="/service" index element={<div>Service</div>} />
           <Route path="/portfolio" index element={<div>Portfolio</div>} />
-          <Route path="/contact" index element={<div>Contact</div>} />
+          <Route path="/contact" index element={<ContactPage />} />
         </Routes>
       </div>
     </BrowserRouter>

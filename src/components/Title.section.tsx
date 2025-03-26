@@ -1,10 +1,11 @@
+import { observer } from "mobx-react";
 import { rootStore } from "../store/global.store";
 
 interface TitleSectionI {
   title: string;
 }
 
-export function TitleSection({ title }: TitleSectionI) {
+export const TitleSection = observer(({ title }: TitleSectionI) => {
   const { activeColor } = rootStore.themeColors;
   return (
     <>
@@ -21,4 +22,4 @@ export function TitleSection({ title }: TitleSectionI) {
       </div>
     </>
   );
-}
+});
