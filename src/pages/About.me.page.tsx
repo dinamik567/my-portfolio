@@ -4,10 +4,26 @@ import { rootStore } from "../store/global.store";
 import { TitleSection } from "../components/Title.section";
 import { NavLink } from "react-router";
 
+const allTech = [
+  "React",
+  "TypeScript",
+  "Redux",
+  "Mobx",
+  "RTK Query",
+  "Tailwind",
+  "Material UI",
+  "CSS",
+  "SCSS",
+  "HTML",
+  "REST API",
+  "WebSockets",
+  "JSON",
+];
+
 export const AboutMePage = observer(() => {
   const { activeColor } = rootStore.themeColors;
   return (
-    <div className="relative bg-light_prime dark:bg-dark_prime dark:text-dark_text w-[87%] h-screen pt-5 pb-16 px-10 overflow-y-scroll overflow-x-hidden">
+    <div className="relative bg-light_prime dark:bg-dark_prime dark:text-dark_text lg:w-[87%] w-full h-screen pt-5 pb-16 xs:px-10 px-4 overflow-y-scroll overflow-x-hidden">
       <ControlPanel />
       <div className="max-w-[1080px] mx-auto">
         <TitleSection title="About Me" />
@@ -47,8 +63,8 @@ export const AboutMePage = observer(() => {
         </div>
 
         <h3 className="mb-5 font-semibold text-xl">My Professional skills</h3>
-        <div className="mb-10 flex justify-between items-start gap-16">
-          <div className="w-1/2">
+        <div className="mb-10 flex flex-col sm:flex-row justify-between items-start sm:gap-16">
+          <div className="w-full">
             <div className="mb-4">
               <div className="flex justify-between items-center mb-3">
                 <span>HTML</span>
@@ -80,7 +96,7 @@ export const AboutMePage = observer(() => {
               ></div>
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="w-full">
             <div className="mb-4">
               <div className="flex justify-between items-center mb-3">
                 <span>React</span>
@@ -106,88 +122,19 @@ export const AboutMePage = observer(() => {
 
         <h3 className="mb-5 font-semibold text-xl">All technologies</h3>
         <div className="mb-10 flex flex-wrap gap-2">
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            React
-          </div>
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            TypeScript
-          </div>
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            Redux
-          </div>
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            Mobx
-          </div>
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            RTK Query
-          </div>
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            Tailwind
-          </div>
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            Material UI
-          </div>
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            CSS
-          </div>
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            SCSS
-          </div>
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            HTML
-          </div>
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            REST API
-          </div>
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            WebSockets
-          </div>
-          <div
-            className="inline-block px-3 py-2 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
-            style={{ "--my-color": activeColor } as React.CSSProperties}
-          >
-            JSON
-          </div>
+          {allTech.map((item) => (
+            <div
+              key={item}
+              className="inline-block xs:px-3 xs:py-2 px-2 py-1 bg-[var(--my-color)] rounded-md text-slate-50 font-medium"
+              style={{ "--my-color": activeColor } as React.CSSProperties}
+            >
+              {item}
+            </div>
+          ))}
         </div>
 
         <h3 className="mb-5 font-semibold text-xl">My Experience</h3>
-        <div className="shadow-2xl py-6 px-10 rounded-xl bg-slate-100 dark:bg-[#222222]">
+        <div className="shadow-2xl py-6 sx:px-10 px-4 rounded-xl bg-slate-100 dark:bg-[#222222]">
           <div className="font-bold mb-2">2023 - 2025</div>
           <div className="mb-1">
             <span className="mr-2 font-bold">Компания:</span> Хартл
@@ -197,16 +144,16 @@ export const AboutMePage = observer(() => {
             <span>Frontend-разработчик</span>
           </div>
           <div>
-            <div className="font-bold">О компании:</div>
-            <div className="ml-8">
+            <div className="font-bold mb-2">О компании:</div>
+            <div className="xs:ml-8 ml-3">
               Цифровое кадровое агентство, специализирующееся на подборе
               профессиональных кадров для компаний и индивидуальных
               предпринимателей.
             </div>
           </div>
           <div className="mb-2">
-            <div className="font-bold"> Обязанности:</div>
-            <ul className="ml-8 flex flex-col gap-y-1">
+            <div className="font-bold mb-2"> Обязанности:</div>
+            <ul className="xs:ml-8 ml-3 flex flex-col gap-y-3">
               <li>- Разработка и поддержка программных продуктов компании</li>
               <li>- Проведение coderewie</li>
               <li>- Участие в планировании работы команды.</li>
@@ -221,7 +168,7 @@ export const AboutMePage = observer(() => {
           </div>
           <div>
             <div className="font-bold">Достижения:</div>
-            <ul className="ml-8 flex flex-col gap-y-1">
+            <ul className="xs:ml-8 ml-3 flex flex-col gap-y-3">
               <li>
                 - Участвовал в создании сервиса для работодателя на новом стеке
                 технологий, осуществлял переход с legacy на React

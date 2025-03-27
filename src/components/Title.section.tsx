@@ -9,7 +9,7 @@ export const TitleSection = observer(({ title }: TitleSectionI) => {
   const { activeColor } = rootStore.themeColors;
   return (
     <>
-      <h2 className="text-3xl font-medium mb-3">{title}</h2>
+      <h2 className="xs:text-3xl text-2xl font-medium mb-3">{title}</h2>
       <div className="flex flex-col gap-2 mb-10">
         <div
           className="w-16 h-1 bg-[var(--my-color)] rounded-lg"

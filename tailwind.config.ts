@@ -20,6 +20,9 @@ export default {
         light_prime: "#e6e8ec",
         light_text: "#3c3341",
       },
+      screens: {
+        xs: "440px",
+      },
     },
   },
   plugins: [],

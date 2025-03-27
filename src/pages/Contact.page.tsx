@@ -12,8 +12,8 @@ import { rootStore } from "../store/global.store";
 export const ContactPage = observer(() => {
   const { activeColor } = rootStore.themeColors;
   return (
-    <div className="w-[87%] h-screen relative dark:bg-dark_prime dark:text-white bg-light_prime text-light_text overflow-hidden">
-      <div className="max-w-[1080px] mx-auto pt-5 px-10">
+    <div className="lg:w-[87%] w-full h-screen relative dark:bg-dark_prime dark:text-white bg-light_prime text-light_text overflow-hidden">
+      <div className="max-w-[1080px] mx-auto pt-5 sm:px-10 px-4">
         <TitleSection title="Contacts" />
         <ControlPanel />
         <div className="pt-10">
@@ -24,9 +24,9 @@ export const ContactPage = observer(() => {
             <h3 className="text-center mt-5 font-medium text-xl mb-8 dark:text-white">
               Ирхин Владислав
             </h3>
-            <div className="flex justify-center">
-              <div className="px-10">
-                <div className="flex justify-start items-center gap-2 mb-4 dark:text-white">
+            <div className="flex xs:flex-row flex-col justify-around px-4 gap-2">
+              <div>
+                <div className="flex justify-start items-center text-sm gap-2 mb-4 dark:text-white">
                   <PhoneIcon fill="currentColor" width={24} height={24} />
                   <a href="">89807039050</a>
                 </div>
