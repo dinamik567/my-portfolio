@@ -24,7 +24,7 @@ export const ContactPage = observer(() => {
             style={{ "--my-color": activeColor } as React.CSSProperties}
           >
             <h3 className="text-center mt-5 font-medium text-xl mb-8 dark:text-white">
-              Ирхин Владислав
+              Владислав Ирхин
             </h3>
             <div className="flex xs:flex-row flex-col justify-around px-4 gap-2">
               <div>

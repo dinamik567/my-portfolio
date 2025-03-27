@@ -7,14 +7,31 @@ import LogoIcon from "../assets/icons/logo.svg?react";
 import { observer } from "mobx-react";
 import { rootStore } from "../store/global.store";
 import { NavLink } from "react-router";
+import { useEffect, useRef } from "react";
 
 export const Dashboard = observer(() => {
+  const navBarElem = useRef<HTMLElement | null>(null);
   const { activeColor, isOpenNavBar, closeNavBar } = rootStore.settingsWebsite;
 
   const handleClickCloseNavBar = () => closeNavBar();
 
+  useEffect(() => {
+    if (!navBarElem.current) return;
+
+    const handleClickDocument = (e: MouseEvent) => {
+      if (!navBarElem.current?.contains(e.target as Node) && isOpenNavBar) {
+        closeNavBar();
+      }
+    };
+
+    document.addEventListener("click", handleClickDocument);
+
+    return () => document.removeEventListener("click", handleClickDocument);
+  });
+
   return (
     <aside
+      ref={navBarElem}
       className={`${
         isOpenNavBar ? "translate-x-0" : "-translate-x-[100%]"
       } lg:translate-x-0 lg:w-fit lg:relative absolute z-10 px-10 lg:px-4 min-h-screen dark:bg-[#222222] bg-[#fdfbff] text-light_text dark:text-white lg:flex flex-col justify-start items-center duration-500 ease-in-out`}
@@ -82,11 +99,11 @@ export const Dashboard = observer(() => {
       </nav>
       <button
         onClick={handleClickCloseNavBar}
-        className="absolute lg:hidden top-4 right-4 w-8 h-8 rounded-full dark:bg-[#222222] bg-gray-300 dark:text-slate-200 flex justify-center items-center"
+        className="absolute lg:hidden top-4 right-4 w-8 h-8 rounded-full dark:bg-neutral-900 bg-gray-300 dark:text-slate-200 flex justify-center items-center"
       >
         <div className="w-5 h-5 relative">
-          <span className="w-full h-[2px] absolute left-0 top-1/2 -translate-y-1/2 bg-light_text dark:text-slate-200 rounded-lg rotate-45" />
-          <span className="w-full h-[2px] absolute right-0 top-1/2 -translate-y-1/2 bg-light_text dark:text-slate-200 rounded-lg -rotate-45" />
+          <span className="w-full h-[2px] absolute left-0 top-1/2 -translate-y-1/2 bg-light_text dark:bg-slate-200 rounded-lg rotate-45" />
+          <span className="w-full h-[2px] absolute right-0 top-1/2 -translate-y-1/2 bg-light_text dark:bg-slate-200 rounded-lg -rotate-45" />
         </div>
       </button>
     </aside>

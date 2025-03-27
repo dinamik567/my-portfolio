@@ -5,17 +5,22 @@ export interface SettingsWebsiteI {
   darkMode: boolean;
   activeColor: string;
   isOpenNavBar: boolean;
+  isOpenThemeColors: boolean;
 
   setColor: (value: string) => void;
   toggleDarkMode: () => void;
   openNavBar: () => void;
   closeNavBar: () => void;
+  closeThemeColors: () => void;
+  toggleThemeColors: () => void;
 }
 
 export class SettingsWebsite {
   darkMode = false;
   activeColor = COLORS["RED"];
   isOpenNavBar = false;
+  isOpenThemeColors = false;
+
   constructor() {
     makeAutoObservable(this);
   }
@@ -34,5 +39,13 @@ export class SettingsWebsite {
 
   closeNavBar = () => {
     this.isOpenNavBar = false;
+  };
+
+  closeThemeColors = () => {
+    this.isOpenThemeColors = false;
+  };
+
+  toggleThemeColors = () => {
+    this.isOpenThemeColors = !this.isOpenThemeColors;
   };
 }
