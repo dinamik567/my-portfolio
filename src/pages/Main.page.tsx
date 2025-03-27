@@ -21,9 +21,9 @@ export const MainPage = observer(() => {
         </div>
         <div className="pt-4 px-4">
           <h1 className="text-xl font-bold mb-6">
-            Hello, my name is{" "}
+            Привет, меня зовут{" "}
             <span
-              className="font-normal text-[var(--my-color)] italic"
+              className="font-normal text-[var(--my-color)] font-lobster text-2xl"
               style={{ "--my-color": activeColor } as React.CSSProperties}
             >
               Владислав Ирхин
@@ -39,15 +39,17 @@ export const MainPage = observer(() => {
             </span>
           </h2>
           <p className="dark:text-slate-300 text-light_text  mb-14">
-            I`m a Frontend Developer extensive experience for over 10 years. My
-            experience is to create and website design, graphic design, and more
+            Я фронтенд разработчик с опытом работы в создании интерактивных
+            сайтов и веб-приложений. Занимаюсь разработкой более 3-х лет,
+            постоянно стремлюсь к саморазвитию и следую лучшим практикам в
+            области фронтенд разработки
           </p>
           <NavLink
             to="/about"
             className="bg-[var(--my-color)] py-2 px-8 rounded-xl text-white"
             style={{ "--my-color": activeColor } as React.CSSProperties}
           >
-            More About me
+            Узнать больше обо мне
           </NavLink>
           <p className="mt-28 font-bold text-3xl leading-10">
             <span className="block mb-2">Light & Dark Mode</span>

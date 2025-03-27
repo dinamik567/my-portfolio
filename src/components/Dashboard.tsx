@@ -35,9 +35,9 @@ export const Dashboard = observer(() => {
           style={{ "--my-color": activeColor } as React.CSSProperties}
           to="/"
         >
-          <div className="flex justify-around items-center gap-4 px-3 py-1 border-b-[1px] border-slate-600 mb-3">
+          <div className="flex justify-start items-center gap-4 px-3 py-1 border-b-[1px] border-slate-600 mb-3">
             <HomeIcon width={16} height={16} />
-            <span>Home</span>
+            <span>Главная</span>
           </div>
         </NavLink>
         <NavLink
@@ -47,9 +47,9 @@ export const Dashboard = observer(() => {
           style={{ "--my-color": activeColor } as React.CSSProperties}
           to="/about"
         >
-          <div className="flex justify-around items-center gap-4 px-3 py-1 border-b-[1px] border-slate-600 mb-3">
-            <UserIcon width={12} height={12} />
-            <span>About</span>
+          <div className="flex justify-start items-center gap-4 px-3 py-1 border-b-[1px] border-slate-600 mb-3">
+            <UserIcon width={16} height={16} />
+            <span>Обо мне</span>
           </div>
         </NavLink>
         <NavLink
@@ -60,11 +60,11 @@ export const Dashboard = observer(() => {
           to="portfolio"
         >
           <div
-            className="flex justify-around items-center gap-4 px-3 py-1
+            className="flex justify-start items-center gap-4 px-3 py-1
           border-b-[1px] border-slate-600 mb-3"
           >
-            <PortfolioIcon fill="currentColor" width={18} height={18} />
-            <span>Portfolio</span>
+            <PortfolioIcon fill="currentColor" width={16} height={16} />
+            <span>Портфолио</span>
           </div>
         </NavLink>
         <NavLink
@@ -74,9 +74,9 @@ export const Dashboard = observer(() => {
           style={{ "--my-color": activeColor } as React.CSSProperties}
           to="contact"
         >
-          <div className="flex justify-around items-center gap-4 px-3 py-1 border-b-[1px] border-slate-600 mb-3">
+          <div className="flex justify-start items-center gap-4 px-3 py-1 border-b-[1px] border-slate-600 mb-3">
             <ContactIcon width={16} height={16} />
-            <span>Contact</span>
+            <span>Контакты</span>
           </div>
         </NavLink>
       </nav>

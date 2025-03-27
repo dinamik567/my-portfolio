@@ -15,7 +15,7 @@ export const ContactPage = observer(() => {
   return (
     <div className=" w-full h-screen relative dark:bg-dark_prime dark:text-white bg-light_prime text-light_text overflow-hidden">
       <div className="max-w-[1080px] mx-auto pt-5 sm:px-10 px-4">
-        <TitleSection title="Contacts" />
+        <TitleSection title="Контакты" />
         <ControlPanel />
         <BurgerMenu />
         <div className="pt-10">

@@ -28,24 +28,31 @@ export const AboutMePage = observer(() => {
       <ControlPanel />
       <BurgerMenu />
       <div className="max-w-[1080px] mx-auto">
-        <TitleSection title="About Me" />
+        <TitleSection title="Обо мне" />
         <h3 className="mb-5 font-semibold text-xl">
-          I`m Irhin Vladislav and{" "}
-          <span
+          Меня зовут Владислав Ирхин{" "}
+          {/* <span
             className="text-[var(--my-color)]"
             style={{ "--my-color": activeColor } as React.CSSProperties}
           >
             Frontend Developer
-          </span>
+          </span> */}
         </h3>
-        <p className="mb-10">
-          Фронтенд разработчик, с опытом работы в создании интерактивных
-          веб-приложений. Постоянно стремлюсь к саморазвитию и следую лучшим
-          практикам в области фронтенд разработки. Обладаю умением быстро
-          обучаться новым технологиям. Умею эффективно взаимодействовать с
-          командой разработки, обсуждать идеи, решать проблемы и достигать
-          поставленных целей.
-        </p>
+        <div className="mb-10">
+          <p className="mb-4">
+            Я фронтенд разработчик, с опытом работы в создании интерактивных
+            веб-приложений. Постоянно стремлюсь к саморазвитию и следую лучшим
+            практикам в области фронтенд разработки. Обладаю умением быстро
+            обучаться новым технологиям. Умею эффективно взаимодействовать с
+            командой разработки, обсуждать идеи, решать проблемы и достигать
+            поставленных целей.
+          </p>
+          <p>
+            В свободное от работы время нравиться гулять на свежем воздухе,
+            ходить в тренажерный зал, изучать английский, читать книги — научную
+            фантастику, психологический реализм и романы.
+          </p>
+        </div>
 
         <div className="mb-10 flex gap-4">
           <a
@@ -53,18 +60,18 @@ export const AboutMePage = observer(() => {
             href="https://hh.ru/resume_converter/%D0%98%D1%80%D1%85%D0%B8%D0%BD%20%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D1%81%D0%BB%D0%B0%D0%B2%20%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D1%8C%D0%B5%D0%B2%D0%B8%D1%87.pdf?hash=2100893bff0dfbe5d60039ed1f626c726d4731&type=pdf&hhtmFrom=&hhtmSource=resume"
             style={{ "--my-color": activeColor } as React.CSSProperties}
           >
-            Download CV
+            Резюме
           </a>{" "}
           <NavLink
             to="/contact"
             className="py-2 px-5 rounded-lg bg-[var(--my-color)] cursor-pointer text-white"
             style={{ "--my-color": activeColor } as React.CSSProperties}
           >
-            Send me
+            Написать мне
           </NavLink>
         </div>
 
-        <h3 className="mb-5 font-semibold text-xl">My Professional skills</h3>
+        <h3 className="mb-5 font-semibold text-xl">Профессиональные навыки</h3>
         <div className="mb-10 flex flex-col sm:flex-row justify-between items-start sm:gap-16">
           <div className="w-full">
             <div className="mb-4">
@@ -102,27 +109,27 @@ export const AboutMePage = observer(() => {
             <div className="mb-4">
               <div className="flex justify-between items-center mb-3">
                 <span>React</span>
-                <span>95%</span>
+                <span>75%</span>
               </div>
               <div
-                className="w-full h-2 rounded-lg  bg-[linear-gradient(to_right,var(--my-color)_95%,#b5acac6e_5%)]"
+                className="w-full h-2 rounded-lg  bg-[linear-gradient(to_right,var(--my-color)_75%,#b5acac6e_25%)]"
                 style={{ "--my-color": activeColor } as React.CSSProperties}
               ></div>
             </div>
             <div className="mb-4">
               <div className="flex justify-between items-center mb-3">
                 <span>TS</span>
-                <span>95%</span>
+                <span>70%</span>
               </div>
               <div
-                className="w-full h-2 rounded-lg   bg-[linear-gradient(to_right,var(--my-color)_95%,#b5acac6e_5%)]"
+                className="w-full h-2 rounded-lg   bg-[linear-gradient(to_right,var(--my-color)_70%,#b5acac6e_30%)]"
                 style={{ "--my-color": activeColor } as React.CSSProperties}
               ></div>
             </div>
           </div>
         </div>
 
-        <h3 className="mb-5 font-semibold text-xl">All technologies</h3>
+        <h3 className="mb-5 font-semibold text-xl">Все технологии</h3>
         <div className="mb-10 flex flex-wrap gap-2">
           {allTech.map((item) => (
             <div
@@ -135,7 +142,7 @@ export const AboutMePage = observer(() => {
           ))}
         </div>
 
-        <h3 className="mb-5 font-semibold text-xl">My Experience</h3>
+        <h3 className="mb-5 font-semibold text-xl">Мой опыт</h3>
         <div className="shadow-2xl py-6 sx:px-10 px-4 rounded-xl bg-slate-100 dark:bg-[#222222]">
           <div className="font-bold mb-2">2023 - 2025</div>
           <div className="mb-1">

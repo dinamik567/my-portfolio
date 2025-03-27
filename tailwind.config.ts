@@ -3,10 +3,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      lobster: ["Lobster", "sans-serif"],
+    },
     extend: {
       animation: {
         runline: "runline 2s infinite",
       },
+
       keyframes: {
         runline: {
           "100%": {

@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Lobster";
+  src: url("./assets/fonts/Lobster-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +14,6 @@
   box-sizing: border-box;
 }
 
-* {
-  @apply: transition-colors duration-400;
-}
+/* * {
+  @apply transition-colors;
+} */
