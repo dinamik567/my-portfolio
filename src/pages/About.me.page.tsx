@@ -3,6 +3,7 @@ import { ControlPanel } from "../components/ui/Control.panel";
 import { rootStore } from "../store/global.store";
 import { TitleSection } from "../components/Title.section";
 import { NavLink } from "react-router";
+import { BurgerMenu } from "../components/ui/Burger.menu";
 
 const allTech = [
   "React",
@@ -23,8 +24,9 @@ const allTech = [
 export const AboutMePage = observer(() => {
   const { activeColor } = rootStore.themeColors;
   return (
-    <div className="relative bg-light_prime dark:bg-dark_prime dark:text-dark_text lg:w-[87%] w-full h-screen pt-5 pb-16 xs:px-10 px-4 overflow-y-scroll overflow-x-hidden">
+    <div className="relative bg-light_prime dark:bg-dark_prime dark:text-dark_text  w-full h-screen pt-5 pb-16 xs:px-10 px-4 overflow-y-scroll overflow-x-hidden">
       <ControlPanel />
+      <BurgerMenu />
       <div className="max-w-[1080px] mx-auto">
         <TitleSection title="About Me" />
         <h3 className="mb-5 font-semibold text-xl">

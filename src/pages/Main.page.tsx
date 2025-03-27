@@ -2,6 +2,7 @@ import { ControlPanel } from "../components/ui/Control.panel";
 import { observer } from "mobx-react";
 import { rootStore } from "../store/global.store";
 import { NavLink } from "react-router";
+import { BurgerMenu } from "../components/ui/Burger.menu";
 
 export const MainPage = observer(() => {
   const { activeColor } = rootStore.themeColors;
@@ -55,6 +56,7 @@ export const MainPage = observer(() => {
         </div>
       </div>
       <ControlPanel />
+      <BurgerMenu />
     </div>
   );
 });

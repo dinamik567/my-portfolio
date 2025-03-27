@@ -8,14 +8,16 @@ import { observer } from "mobx-react";
 import { TitleSection } from "../components/Title.section";
 import { ControlPanel } from "../components/ui/Control.panel";
 import { rootStore } from "../store/global.store";
+import { BurgerMenu } from "../components/ui/Burger.menu";
 
 export const ContactPage = observer(() => {
   const { activeColor } = rootStore.themeColors;
   return (
-    <div className="lg:w-[87%] w-full h-screen relative dark:bg-dark_prime dark:text-white bg-light_prime text-light_text overflow-hidden">
+    <div className=" w-full h-screen relative dark:bg-dark_prime dark:text-white bg-light_prime text-light_text overflow-hidden">
       <div className="max-w-[1080px] mx-auto pt-5 sm:px-10 px-4">
         <TitleSection title="Contacts" />
         <ControlPanel />
+        <BurgerMenu />
         <div className="pt-10">
           <div
             className="w-full relative max-w-[700px] min-h-80 rounded-xl shadow-xl p-6 dark:bg-[#222222] text-light_text bg-white before:absolute before:w-16 before:h-16 before:top-6 before:left-6 before:border-t-[6px] before:border-l-[6px] before:border-[var(--my-color)] after:absolute after:w-16 after:h-16 after:bottom-6 after:right-6 after:border-b-[6px] after:border-r-[6px] after:border-[var(--my-color)]"

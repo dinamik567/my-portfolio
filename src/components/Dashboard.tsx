@@ -9,10 +9,16 @@ import { rootStore } from "../store/global.store";
 import { NavLink } from "react-router";
 
 export const Dashboard = observer(() => {
-  const { activeColor } = rootStore.themeColors;
+  const { activeColor, isOpenNavBar, closeNavBar } = rootStore.themeColors;
+
+  const handleClickCloseNavBar = () => closeNavBar();
 
   return (
-    <aside className="lg:w-[13%] hidden min-h-screen dark:bg-[#222222] bg-[#fdfbff] text-light_text dark:text-white lg:flex flex-col justify-start items-center">
+    <aside
+      className={`${
+        isOpenNavBar ? "translate-x-0" : "-translate-x-[100%]"
+      } lg:w-fit lg:relative absolute z-10 px-10 lg:px-4 min-h-screen dark:bg-[#222222] bg-[#fdfbff] text-light_text dark:text-white lg:flex flex-col justify-start items-center duration-500 ease-in-out`}
+    >
       <div
         className="w-28 h-16 relative mb-[75%] mt-12 after:absolute after:top-0 after:left-3 after:w-8 after:h-8 after:border-t-4 after:border-l-4 after:border-[var(--my-color)] before:absolute before:w-8 before:h-8 before:border-b-4 before:border-r-4 before:right-3 before:bottom-0 before:border-[var(--my-color)]"
         style={{ "--my-color": activeColor } as React.CSSProperties}
@@ -74,6 +80,15 @@ export const Dashboard = observer(() => {
           </div>
         </NavLink>
       </nav>
+      <button
+        onClick={handleClickCloseNavBar}
+        className="absolute lg:hidden top-4 right-4 w-8 h-8 rounded-full dark:bg-[#222222] bg-gray-300 dark:text-slate-200 flex justify-center items-center"
+      >
+        <div className="w-5 h-5 relative">
+          <span className="w-full h-[2px] absolute left-0 top-1/2 -translate-y-1/2 bg-light_text dark:text-slate-200 rounded-lg rotate-45" />
+          <span className="w-full h-[2px] absolute right-0 top-1/2 -translate-y-1/2 bg-light_text dark:text-slate-200 rounded-lg -rotate-45" />
+        </div>
+      </button>
     </aside>
   );
 });

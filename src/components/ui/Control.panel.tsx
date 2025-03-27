@@ -64,13 +64,6 @@ export const ControlPanel = observer(() => {
         </div>
       </div>
       <div className="flex flex-col gap-3">
-        <button className="lg:hidden w-10 h-10 rounded-full dark:bg-[#222222] bg-gray-300 dark:text-slate-200 flex justify-center items-center">
-          <div className="w-6 h-5 flex flex-col justify-between">
-            <span className="w-full h-1 bg-light_text dark:text-slate-200 rounded-lg" />
-            <span className="w-full h-1 bg-light_text dark:text-slate-200 rounded-lg" />
-            <span className="w-full h-1 bg-light_text dark:text-slate-200 rounded-lg" />
-          </div>
-        </button>
         <button
           onClick={handleClickSettings}
           className="w-10 h-10 rounded-full dark:bg-[#222222] bg-gray-300 dark:text-slate-200 text-light_text flex justify-center items-center"
