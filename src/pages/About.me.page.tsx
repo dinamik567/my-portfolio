@@ -22,7 +22,7 @@ const allTech = [
 ];
 
 export const AboutMePage = observer(() => {
-  const { activeColor } = rootStore.themeColors;
+  const { activeColor } = rootStore.settingsWebsite;
   return (
     <div className="relative bg-light_prime dark:bg-dark_prime dark:text-dark_text  w-full h-screen pt-5 pb-16 xs:px-10 px-4 overflow-y-scroll overflow-x-hidden">
       <ControlPanel />

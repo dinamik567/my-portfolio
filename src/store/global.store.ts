@@ -1,10 +1,10 @@
 import { makeAutoObservable, observable } from "mobx";
-import { ThemeColors, ThemeColorsI } from "./theme.colors";
+import { SettingsWebsite, SettingsWebsiteI } from "./settings.website";
 
 class RootStore {
-  themeColors: ThemeColorsI;
+  settingsWebsite: SettingsWebsiteI;
   constructor() {
-    this.themeColors = observable(new ThemeColors());
+    this.settingsWebsite = observable(new SettingsWebsite());
     makeAutoObservable(this);
   }
 }

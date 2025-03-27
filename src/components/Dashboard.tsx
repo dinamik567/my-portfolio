@@ -9,7 +9,7 @@ import { rootStore } from "../store/global.store";
 import { NavLink } from "react-router";
 
 export const Dashboard = observer(() => {
-  const { activeColor, isOpenNavBar, closeNavBar } = rootStore.themeColors;
+  const { activeColor, isOpenNavBar, closeNavBar } = rootStore.settingsWebsite;
 
   const handleClickCloseNavBar = () => closeNavBar();
 
@@ -17,7 +17,7 @@ export const Dashboard = observer(() => {
     <aside
       className={`${
         isOpenNavBar ? "translate-x-0" : "-translate-x-[100%]"
-      } lg:w-fit lg:relative absolute z-10 px-10 lg:px-4 min-h-screen dark:bg-[#222222] bg-[#fdfbff] text-light_text dark:text-white lg:flex flex-col justify-start items-center duration-500 ease-in-out`}
+      } lg:translate-x-0 lg:w-fit lg:relative absolute z-10 px-10 lg:px-4 min-h-screen dark:bg-[#222222] bg-[#fdfbff] text-light_text dark:text-white lg:flex flex-col justify-start items-center duration-500 ease-in-out`}
     >
       <div
         className="w-28 h-16 relative mb-[75%] mt-12 after:absolute after:top-0 after:left-3 after:w-8 after:h-8 after:border-t-4 after:border-l-4 after:border-[var(--my-color)] before:absolute before:w-8 before:h-8 before:border-b-4 before:border-r-4 before:right-3 before:bottom-0 before:border-[var(--my-color)]"

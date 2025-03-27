@@ -2,7 +2,7 @@ import { observer } from "mobx-react";
 import { rootStore } from "../../store/global.store";
 
 export const BurgerMenu = observer(() => {
-  const { openNavBar } = rootStore.themeColors;
+  const { openNavBar } = rootStore.settingsWebsite;
 
   const handleClickCloseNavBar = () => openNavBar();
 

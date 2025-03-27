@@ -11,7 +11,7 @@ import { rootStore } from "../store/global.store";
 import { BurgerMenu } from "../components/ui/Burger.menu";
 
 export const ContactPage = observer(() => {
-  const { activeColor } = rootStore.themeColors;
+  const { activeColor } = rootStore.settingsWebsite;
   return (
     <div className=" w-full h-screen relative dark:bg-dark_prime dark:text-white bg-light_prime text-light_text overflow-hidden">
       <div className="max-w-[1080px] mx-auto pt-5 sm:px-10 px-4">

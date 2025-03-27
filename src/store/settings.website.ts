@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 import { COLORS } from "../default.settings";
 
-export interface ThemeColorsI {
+export interface SettingsWebsiteI {
   darkMode: boolean;
   activeColor: string;
   isOpenNavBar: boolean;
@@ -12,10 +12,10 @@ export interface ThemeColorsI {
   closeNavBar: () => void;
 }
 
-export class ThemeColors {
+export class SettingsWebsite {
   darkMode = false;
   activeColor = COLORS["RED"];
-  isOpenNavBar = true;
+  isOpenNavBar = false;
   constructor() {
     makeAutoObservable(this);
   }
@@ -36,5 +36,3 @@ export class ThemeColors {
     this.isOpenNavBar = false;
   };
 }
-
-export const themeColors = new ThemeColors();

@@ -8,7 +8,7 @@ import { ContactPage } from "../pages/Contact.page";
 import { PortfolioPage } from "../pages/Portfolio.page";
 
 export const Router = observer(() => {
-  const { darkMode } = rootStore.themeColors;
+  const { darkMode } = rootStore.settingsWebsite;
 
   return (
     <BrowserRouter>

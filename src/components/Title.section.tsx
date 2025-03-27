@@ -6,7 +6,7 @@ interface TitleSectionI {
 }
 
 export const TitleSection = observer(({ title }: TitleSectionI) => {
-  const { activeColor } = rootStore.themeColors;
+  const { activeColor } = rootStore.settingsWebsite;
   return (
     <div className="lg:mt-0 mt-12">
       <h2 className="xs:text-3xl text-2xl font-medium mb-3">{title}</h2>

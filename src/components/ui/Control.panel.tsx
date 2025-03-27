@@ -9,23 +9,21 @@ import { observer } from "mobx-react";
 
 export const ControlPanel = observer(() => {
   const [isOpenPanel, setIsOpenPanel] = useState(false);
-  const { darkMode } = rootStore.themeColors;
+  const { darkMode, setColor, toggleDarkMode } = rootStore.settingsWebsite;
 
   const handleClickSettings = () => setIsOpenPanel((prev) => !prev);
 
-  const handleToggleDarkMode = () => rootStore.themeColors.toggleDarkMode();
+  const handleToggleDarkMode = () => toggleDarkMode();
 
-  const handleClickRed = () => rootStore.themeColors.setColor(COLORS["RED"]);
+  const handleClickRed = () => setColor(COLORS["RED"]);
 
-  const handleClickOrange = () =>
-    rootStore.themeColors.setColor(COLORS["ORANGE"]);
+  const handleClickOrange = () => setColor(COLORS["ORANGE"]);
 
-  const handleClickGreen = () =>
-    rootStore.themeColors.setColor(COLORS["GREEN"]);
+  const handleClickGreen = () => setColor(COLORS["GREEN"]);
 
-  const handleClickBlue = () => rootStore.themeColors.setColor(COLORS["BLUE"]);
+  const handleClickBlue = () => setColor(COLORS["BLUE"]);
 
-  const handleClickPink = () => rootStore.themeColors.setColor(COLORS["PINK"]);
+  const handleClickPink = () => setColor(COLORS["PINK"]);
 
   return (
     <div className="absolute top-4 right-3 flex justify-between gap-4 dark:text-slate-200">
