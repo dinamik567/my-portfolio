@@ -7,7 +7,7 @@ import { BurgerMenu } from "../components/ui/Burger.menu";
 export const MainPage = observer(() => {
   const { activeColor } = rootStore.settingsWebsite;
   return (
-    <div className="w-full h-screen relative dark:bg-dark_prime dark:text-white bg-light_prime text-light_text overflow-x-hidden overflow-y-scroll pb-6">
+    <div className="w-full max-h-screen relative dark:bg-dark_prime dark:text-white bg-light_prime text-light_text overflow-x-hidden overflow-y-auto pb-6">
       <div className="flex md:justify-between flex-col md:flex-row-reverse items-center md:items-start gap-20 w-10/12 mx-auto md:mt-44 mt-32">
         <div
           className="relative md:max-w-xs xs:max-w-64 max-w-48 sm:px-7 sm:py-14 py-7 flex justify-center after:absolute after:bottom-[95%] after:right-[95%] bg-black after:w-16 after:h-16 after:border-l-8 after:border-t-8 after:border-[var(--active-theme-color)] before:absolute before:top-[95%] before:left-[95%] before:w-16 before:h-16 before:border-r-8 before:border-b-8 before:border-[var(--active-theme-color)]"
@@ -51,7 +51,7 @@ export const MainPage = observer(() => {
           >
             Узнать больше обо мне
           </NavLink>
-          <p className="mt-28 font-bold text-3xl leading-10">
+          <p className="md:mt-28 mt-10 font-bold text-3xl leading-10">
             <span className="block mb-2">Light & Dark Mode</span>
             <span className="block">Theme Colors</span>
           </p>

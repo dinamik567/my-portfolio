@@ -30,7 +30,7 @@ export const ContactPage = observer(() => {
               <div>
                 <div className="flex justify-start items-center text-sm gap-2 mb-4 dark:text-white">
                   <PhoneIcon fill="currentColor" width={24} height={24} />
-                  <a href="">89807039050</a>
+                  <a href="tel:+79807039050">89807039050</a>
                 </div>
                 <div className="flex justify-start items-center gap-2 mb-4 dark:text-white">
                   <TelegramIcon fill="currentColor" width={24} height={24} />
@@ -38,7 +38,7 @@ export const ContactPage = observer(() => {
                 </div>
                 <div className="flex justify-start items-center gap-2 dark:text-white">
                   <MailIcon fill="currentColor" width={24} height={24} />
-                  <a href="https://t.me/dinamik567">irhin2011@yandex.ru</a>
+                  <a href="mailto:irhin2011@yandex.ru">irhin2011@yandex.ru</a>
                 </div>
               </div>
               <div>
@@ -46,7 +46,7 @@ export const ContactPage = observer(() => {
                   {" "}
                   <div className="flex justify-start items-center gap-2 mb-4 dark:text-white">
                     <GithubIcon fill="currentColor" width={24} height={24} />
-                    <a href="https://t.me/dinamik567">github</a>
+                    <a href="https://github.com/dinamik567">github</a>
                   </div>
                   <div className="flex justify-start items-center gap-2 dark:text-white">
                     <VkIcon fill="currentColor" width={24} height={24} />
